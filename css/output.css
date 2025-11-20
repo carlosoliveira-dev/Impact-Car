@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -6,6 +7,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-700: oklch(50.5% 0.213 27.518);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-zinc-900: oklch(21% 0.006 285.885);
     --color-stone-950: oklch(14.7% 0.004 49.25);
     --color-white: #fff;
@@ -178,9 +182,15 @@
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
   .size-6 {
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
+  }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
   }
   .w-2\.5 {
     width: calc(var(--spacing) * 2.5);
@@ -188,17 +198,30 @@
   .w-3 {
     width: calc(var(--spacing) * 3);
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
   .justify-between {
     justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .bg-stone-950 {
     background-color: var(--color-stone-950);
   }
   .bg-zinc-900 {
     background-color: var(--color-zinc-900);
+  }
+  .fill-gray-300 {
+    fill: var(--color-gray-300);
   }
   .fill-white {
     fill: var(--color-white);
@@ -212,17 +235,58 @@
   .text-center {
     text-align: center;
   }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
+  .text-red-700 {
+    color: var(--color-red-700);
+  }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .xl\:mr-50 {
     @media (width >= 80rem) {
       margin-right: calc(var(--spacing) * 50);
     }
   }
+  .xl\:ml-5 {
+    @media (width >= 80rem) {
+      margin-left: calc(var(--spacing) * 5);
+    }
+  }
   .xl\:justify-end {
     @media (width >= 80rem) {
       justify-content: flex-end;
+    }
+  }
+  .xl\:text-left {
+    @media (width >= 80rem) {
+      text-align: left;
+    }
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-outline-style: solid;
     }
   }
 }
