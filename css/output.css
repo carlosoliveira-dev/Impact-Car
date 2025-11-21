@@ -14,8 +14,11 @@
     --color-red-700: oklch(50.5% 0.213 27.518);
     --color-red-800: oklch(44.4% 0.177 26.899);
     --color-red-900: oklch(39.6% 0.141 25.723);
+    --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-green-900: oklch(39.3% 0.095 152.535);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-700: oklch(48.8% 0.243 264.376);
+    --color-blue-900: oklch(37.9% 0.146 265.522);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -344,6 +347,9 @@
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
   .w-30 {
     width: calc(var(--spacing) * 30);
   }
@@ -420,8 +426,17 @@
   .bg-zinc-900 {
     background-color: var(--color-zinc-900);
   }
+  .fill-blue-900 {
+    fill: var(--color-blue-900);
+  }
   .fill-gray-300 {
     fill: var(--color-gray-300);
+  }
+  .fill-green-500 {
+    fill: var(--color-green-500);
+  }
+  .fill-green-900 {
+    fill: var(--color-green-900);
   }
   .fill-red-500 {
     fill: var(--color-red-500);
@@ -481,6 +496,9 @@
   }
   .text-gray-700 {
     color: var(--color-gray-700);
+  }
+  .text-green-900 {
+    color: var(--color-green-900);
   }
   .text-red-700 {
     color: var(--color-red-700);
