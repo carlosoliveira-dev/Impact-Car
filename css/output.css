@@ -208,6 +208,9 @@
   .right-5 {
     right: calc(var(--spacing) * 5);
   }
+  .right-10 {
+    right: calc(var(--spacing) * 10);
+  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
@@ -240,6 +243,9 @@
   }
   .z-1000 {
     z-index: 1000;
+  }
+  .z-999999 {
+    z-index: 999999;
   }
   .m-2 {
     margin: calc(var(--spacing) * 2);
@@ -419,6 +425,12 @@
   }
   .fill-white {
     fill: var(--color-white);
+  }
+  .object-contain {
+    object-fit: contain;
+  }
+  .object-cover {
+    object-fit: cover;
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
