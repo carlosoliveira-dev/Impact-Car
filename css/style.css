@@ -8,6 +8,20 @@
     }
 }
 
-#menu-content {
-    animation: slide-in-left 500ms ease-out forwards;
+@keyframes slide-out-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.menu-open {
+    animation: slide-in-left 300ms ease-out forwards;
+}
+
+.menu-close {
+    animation: slide-out-left 300ms ease-out forwards;
 }
