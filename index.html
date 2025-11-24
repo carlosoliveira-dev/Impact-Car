@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./css/output.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
   <title>Impact Car</title>
 </head>
 <body>
@@ -58,6 +59,29 @@
     </div>
 
 </div>
+
+<!-- carousel -->
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="flex flex-col items-center">
+                <img class="" src="public/bg-slider-1.jpg">
+            </div>
+        </div>
+      <div class="swiper-slide">
+        <div class="flex flex-col items-center">
+            <img class="" src="public/bg-slider-2.jpg">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="flex flex-col items-center">
+            <img class="" src="public/bg-slider-3.jpg">
+            </div>
+        </div>
+    </div>
+  </div>
 
 <!-- seção nossos serviços -->
 <div class="ml-3">
@@ -204,5 +228,15 @@ class="fixed bottom-10 right-5 z-50">
 </a>
 
 <script src="js/main.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper(".mySwiper", {
+    loop: true
+});
+</script>
+  
 </body>
 </html>
