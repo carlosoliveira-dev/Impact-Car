@@ -53,3 +53,17 @@
 .search-close {
     animation: slide-up-close 300ms ease-in forwards;
 }
+
+.carousel {
+    transition: 
+        opacity 0.7s ease-out, 
+        transform 0.7s ease-out;
+
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.swiper-slide-active .carousel {
+    opacity: 1;
+    transform: translateY(0);
+}
