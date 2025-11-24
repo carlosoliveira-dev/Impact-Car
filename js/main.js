@@ -5,6 +5,7 @@ const menuSearch = document.getElementById('menu-search');
 const menuContent = document.getElementById('menu-content');
 const menuSearchContent = document.getElementById('menu-search-content');
 const menuSearchClose = document.getElementById('menu-search-close');
+const menuSearchInput = document.getElementById('search-input');
 const header = document.getElementById('header');
 
 // lógica do menu lateral
@@ -30,6 +31,7 @@ menuIconClose.addEventListener('click', () => {
 menuSearch.addEventListener('click', () => {
     menuSearchContent.classList.toggle('hidden');
     menuSearchContent.classList.toggle('search-open');
+    menuSearchInput.focus();
     setTimeout(() => {
         menuSearchContent.classList.remove('search-open');
     }, 300);
