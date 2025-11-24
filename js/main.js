@@ -29,11 +29,16 @@ menuIconClose.addEventListener('click', () => {
 // lógica do menu de busca
 menuSearch.addEventListener('click', () => {
     menuSearchContent.classList.toggle('hidden');
-    header.classList.toggle('hidden');
-
+    menuSearchContent.classList.toggle('search-open');
+    setTimeout(() => {
+        menuSearchContent.classList.remove('search-open');
+    }, 300);
 });
 
 menuSearchClose.addEventListener('click', () => {
-    menuSearchContent.classList.toggle('hidden');
-    header.classList.toggle('hidden');
+    menuSearchContent.classList.toggle('search-close');
+    setTimeout(() => {
+        menuSearchContent.classList.toggle('hidden');
+        menuSearchContent.classList.remove('search-close');
+    }, 300);
 });

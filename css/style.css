@@ -18,10 +18,38 @@
     }
 }
 
+@keyframes slide-down-open {
+    0% {
+        transform: translateY(-100%); 
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-up-close {
+    0% {
+        transform: translateY(0); 
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
 .menu-open {
     animation: slide-in-left 300ms ease-out forwards;
 }
 
 .menu-close {
     animation: slide-out-left 300ms ease-out forwards;
+}
+
+.search-open {
+    animation: slide-down-open 300ms ease-out forwards;
+}
+
+.search-close {
+    animation: slide-up-close 300ms ease-in forwards;
 }
