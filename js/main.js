@@ -1,21 +1,31 @@
 // Obtém referências aos elementos
 const menuIcon = document.getElementById('menu-icon');
 const menuIconClose = document.getElementById('menu-icon-close');
+const menuSearch = document.getElementById('menu-search');
 const menuContent = document.getElementById('menu-content');
+const menuSearchContent = document.getElementById('menu-search-content');
+const menuSearchClose = document.getElementById('menu-search-close');
 const header = document.getElementById('header');
 
-// Adiciona um "ouvinte" de evento de clique
+// lógica do menu lateral
 menuIcon.addEventListener('click', () => {
-    // Alterna a classe 'hidden' no elemento alvo
     menuContent.classList.toggle('hidden');
     header.classList.toggle('hidden');
-    // Você pode alternar outras classes aqui, como 'flex' ou 'block'
 });
 
-// Adiciona um "ouvinte" de evento de clique
 menuIconClose.addEventListener('click', () => {
-    // Alterna a classe 'hidden' no elemento alvo
     menuContent.classList.toggle('hidden');
     header.classList.toggle('hidden');
-    // Você pode alternar outras classes aqui, como 'flex' ou 'block'
+});
+
+// lógica do menu de busca
+menuSearch.addEventListener('click', () => {
+    menuSearchContent.classList.toggle('hidden');
+    header.classList.toggle('hidden');
+
+});
+
+menuSearchClose.addEventListener('click', () => {
+    menuSearchContent.classList.toggle('hidden');
+    header.classList.toggle('hidden');
 });
