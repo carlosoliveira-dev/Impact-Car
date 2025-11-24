@@ -9,7 +9,6 @@ const header = document.getElementById('header');
 
 // lógica do menu lateral
 menuIcon.addEventListener('click', () => {
-    header.classList.toggle('hidden');
     menuContent.classList.toggle('hidden');
     menuContent.classList.toggle('menu-open');
     
@@ -21,8 +20,7 @@ menuIcon.addEventListener('click', () => {
 menuIconClose.addEventListener('click', () => {
     menuContent.classList.toggle('menu-close');
     setTimeout(() => {
-         header.classList.toggle('hidden');
-         menuContent.classList.toggle('hidden');
+        menuContent.classList.toggle('hidden');
         menuContent.classList.remove('menu-close');
 
     }, 300);
