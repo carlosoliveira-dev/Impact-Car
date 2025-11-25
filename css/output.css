@@ -228,6 +228,9 @@
   .bottom-22 {
     bottom: calc(var(--spacing) * 22);
   }
+  .bottom-30 {
+    bottom: calc(var(--spacing) * 30);
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
@@ -309,6 +312,12 @@
   }
   .h-88 {
     height: calc(var(--spacing) * 88);
+  }
+  .h-100 {
+    height: calc(var(--spacing) * 100);
+  }
+  .h-200 {
+    height: calc(var(--spacing) * 200);
   }
   .h-full {
     height: 100%;
@@ -427,6 +436,12 @@
   }
   .fill-white {
     fill: var(--color-white);
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .object-left {
+    object-position: left;
   }
   .p-0 {
     padding: calc(var(--spacing) * 0);
