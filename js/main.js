@@ -7,6 +7,8 @@ const menuSearchContent = document.getElementById('menu-search-content');
 const menuSearchClose = document.getElementById('menu-search-close');
 const menuSearchInput = document.getElementById('search-input');
 const header = document.getElementById('header');
+const card1Front = document.getElementById('card1-front');
+const card1Back = document.getElementById('card1-back');
 
 // lógica do menu lateral
 menuIcon.addEventListener('click', () => {
@@ -43,4 +45,33 @@ menuSearchClose.addEventListener('click', () => {
         menuSearchContent.classList.toggle('hidden');
         menuSearchContent.classList.remove('search-close');
     }, 300);
+});
+
+// lógica dos cards informativos
+card1Front.addEventListener('click', () => {
+    card1Front.classList.remove('animation-fade-in');
+    card1Front.classList.remove('animation-fade-out');
+    card1Back.classList.remove('animation-fade-in');
+    card1Back.classList.remove('animation-fade-out');
+    card1Front.classList.add('animation-fade-out');
+    setTimeout(() => {
+        card1Front.classList.remove('animation-fade-out');
+        card1Front.classList.add('hidden');
+        card1Back.classList.toggle('animation-fade-in');
+        card1Back.classList.remove('hidden');
+    }, 500);
+});
+
+card1Back.addEventListener('click', () => {
+    card1Front.classList.remove('animation-fade-in');
+    card1Front.classList.remove('animation-fade-out');
+    card1Back.classList.remove('animation-fade-in');
+    card1Back.classList.remove('animation-fade-out');
+    card1Back.classList.add('animation-fade-out');
+    setTimeout(() => {
+        card1Back.classList.remove('animation-fade-out');
+        card1Back.classList.add('hidden');
+        card1Front.classList.toggle('animation-fade-in');
+        card1Front.classList.remove('hidden');
+    }, 500);
 });
