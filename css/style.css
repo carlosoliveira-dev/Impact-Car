@@ -56,6 +56,18 @@
   }
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1)
+  } 
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .menu-open {
     animation: slide-in-left 300ms ease-out forwards;
 }
@@ -92,4 +104,8 @@
 
 .animation-fade-out {
     animation: fade-out 500ms ease-out forwards;
+}
+
+.animation-pulse {
+    animation: pulse 2s ease-out forwards infinite;
 }
