@@ -81,7 +81,7 @@ const animationLeftItens = document.querySelectorAll('.animation-trigger-left');
 
 const observerLeftOptions = {
   root: null,
-  threshold: 0.2
+  threshold: 0.1
 };
 
 const observerLeftCallback = (entries, observer) => {
@@ -103,7 +103,7 @@ const animationRightItens = document.querySelectorAll('.animation-trigger-right'
 
 const observerRightOptions = {
   root: null,
-  threshold: 0.2
+  threshold: 0.1
 };
 
 const observerRightCallback = (entries, observer) => {
