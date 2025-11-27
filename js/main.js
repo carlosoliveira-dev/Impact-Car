@@ -75,3 +75,48 @@ card1Back.addEventListener('click', () => {
         card1Front.classList.remove('hidden');
     }, 500);
 });
+
+// lógica das animações de rolagem de tela
+const animationLeftItens = document.querySelectorAll('.animation-trigger-left');
+
+const observerLeftOptions = {
+  root: null,
+  threshold: 0.2
+};
+
+const observerLeftCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animation-slide-in-from-left');
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const LeftObserver = new IntersectionObserver(observerLeftCallback, observerLeftOptions);
+
+animationLeftItens.forEach(item => {
+  LeftObserver.observe(item);
+});
+
+const animationRightItens = document.querySelectorAll('.animation-trigger-right');
+
+const observerRightOptions = {
+  root: null,
+  threshold: 0.2
+};
+
+const observerRightCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animation-slide-in-from-right');
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+const RightObserver = new IntersectionObserver(observerRightCallback, observerRightOptions);
+
+animationRightItens.forEach(item => {
+    RightObserver.observe(item);
+});

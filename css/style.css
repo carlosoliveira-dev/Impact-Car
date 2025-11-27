@@ -90,6 +90,14 @@
   }
 }
 
+.animation-trigger-left {
+    will-change: transform, opacity;
+}
+
+.animation-trigger-right {
+    will-change: transform, opacity;
+}
+
 .animation-slide-in-from-left {
     animation: slide-in-from-left 1s ease-out forwards;
 }
@@ -139,3 +147,4 @@
 .animation-pulse {
     animation: pulse 2s ease-out forwards infinite;
 }
+
