@@ -92,10 +92,12 @@
 
 .animation-trigger-left {
     will-change: transform, opacity;
+    opacity: 0;
 }
 
 .animation-trigger-right {
     will-change: transform, opacity;
+    opacity: 0;
 }
 
 .animation-slide-in-from-left {
