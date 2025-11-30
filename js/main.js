@@ -112,6 +112,64 @@ card2Back.addEventListener('click', () => {
     }, 500);
 });
 
+// card 3
+card3Front.addEventListener('click', () => {
+    card3Front.classList.remove('animation-fade-in');
+    card3Front.classList.remove('animation-fade-out');
+    card3Back.classList.remove('animation-fade-in');
+    card3Back.classList.remove('animation-fade-out');
+    card3Front.classList.add('animation-fade-out');
+    setTimeout(() => {
+        card3Front.classList.remove('animation-fade-out');
+        card3Front.classList.add('hidden');
+        card3Back.classList.toggle('animation-fade-in');
+        card3Back.classList.remove('hidden');
+    }, 500);
+});
+
+card3Back.addEventListener('click', () => {
+    card3Front.classList.remove('animation-fade-in');
+    card3Front.classList.remove('animation-fade-out');
+    card3Back.classList.remove('animation-fade-in');
+    card3Back.classList.remove('animation-fade-out');
+    card3Back.classList.add('animation-fade-out');
+    setTimeout(() => {
+        card3Back.classList.remove('animation-fade-out');
+        card3Back.classList.add('hidden');
+        card3Front.classList.toggle('animation-fade-in');
+        card3Front.classList.remove('hidden');
+    }, 500);
+});
+
+// card 4
+card4Front.addEventListener('click', () => {
+    card4Front.classList.remove('animation-fade-in');
+    card4Front.classList.remove('animation-fade-out');
+    card4Back.classList.remove('animation-fade-in');
+    card4Back.classList.remove('animation-fade-out');
+    card4Front.classList.add('animation-fade-out');
+    setTimeout(() => {
+        card4Front.classList.remove('animation-fade-out');
+        card4Front.classList.add('hidden');
+        card4Back.classList.toggle('animation-fade-in');
+        card4Back.classList.remove('hidden');
+    }, 500);
+});
+
+card4Back.addEventListener('click', () => {
+    card4Front.classList.remove('animation-fade-in');
+    card4Front.classList.remove('animation-fade-out');
+    card4Back.classList.remove('animation-fade-in');
+    card4Back.classList.remove('animation-fade-out');
+    card4Back.classList.add('animation-fade-out');
+    setTimeout(() => {
+        card4Back.classList.remove('animation-fade-out');
+        card4Back.classList.add('hidden');
+        card4Front.classList.toggle('animation-fade-in');
+        card4Front.classList.remove('hidden');
+    }, 500);
+});
+
 // lógica das animações de rolagem de tela
 const animationLeftItens = document.querySelectorAll('.animation-trigger-left');
 
