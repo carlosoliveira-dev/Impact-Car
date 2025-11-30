@@ -9,6 +9,12 @@ const menuSearchInput = document.getElementById('search-input');
 const header = document.getElementById('header');
 const card1Front = document.getElementById('card1-front');
 const card1Back = document.getElementById('card1-back');
+const card2Front = document.getElementById('card2-front');
+const card2Back = document.getElementById('card2-back');
+const card3Front = document.getElementById('card3-front');
+const card3Back = document.getElementById('card3-back');
+const card4Front = document.getElementById('card4-front');
+const card4Back = document.getElementById('card4-back');
 
 // lógica do menu lateral
 menuIcon.addEventListener('click', () => {
@@ -48,6 +54,7 @@ menuSearchClose.addEventListener('click', () => {
 });
 
 // lógica dos cards informativos
+// card 1
 card1Front.addEventListener('click', () => {
     card1Front.classList.remove('animation-fade-in');
     card1Front.classList.remove('animation-fade-out');
@@ -73,6 +80,35 @@ card1Back.addEventListener('click', () => {
         card1Back.classList.add('hidden');
         card1Front.classList.toggle('animation-fade-in');
         card1Front.classList.remove('hidden');
+    }, 500);
+});
+
+// card 2
+card2Front.addEventListener('click', () => {
+    card2Front.classList.remove('animation-fade-in');
+    card2Front.classList.remove('animation-fade-out');
+    card2Back.classList.remove('animation-fade-in');
+    card2Back.classList.remove('animation-fade-out');
+    card2Front.classList.add('animation-fade-out');
+    setTimeout(() => {
+        card2Front.classList.remove('animation-fade-out');
+        card2Front.classList.add('hidden');
+        card2Back.classList.toggle('animation-fade-in');
+        card2Back.classList.remove('hidden');
+    }, 500);
+});
+
+card2Back.addEventListener('click', () => {
+    card2Front.classList.remove('animation-fade-in');
+    card2Front.classList.remove('animation-fade-out');
+    card2Back.classList.remove('animation-fade-in');
+    card2Back.classList.remove('animation-fade-out');
+    card2Back.classList.add('animation-fade-out');
+    setTimeout(() => {
+        card2Back.classList.remove('animation-fade-out');
+        card2Back.classList.add('hidden');
+        card2Front.classList.toggle('animation-fade-in');
+        card2Front.classList.remove('hidden');
     }, 500);
 });
 
